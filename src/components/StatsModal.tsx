@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { X, TrendingUp, Award, Calendar, Target } from 'lucide-react';
 import { useGameStore } from '../stores/gameStore';
-import { useLanguage } from '../contexts/LanguageContext';
+// import { useLanguage } from '../contexts/LanguageContext';
 import { format, startOfWeek, endOfWeek, eachDayOfInterval } from 'date-fns';
 
 interface StatsModalProps {
@@ -10,7 +10,7 @@ interface StatsModalProps {
 
 export default function StatsModal({ onClose }: StatsModalProps) {
   const { level, xp, xpForNextLevel, currentStreak, longestStreak, totalCompleted, moodHistory } = useGameStore();
-  const { t } = useLanguage();
+  // const { t } = useLanguage();
 
   // Calculate weekly stats
   const now = new Date();

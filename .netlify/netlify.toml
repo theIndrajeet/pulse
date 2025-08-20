@@ -1,3 +1,5 @@
+functionsDirectory = "/Users/issac/Desktop/pulse-app/netlify/functions"
+functionsDirectoryOrigin = "config-v1"
 plugins = []
 headers = []
 
@@ -6,11 +8,11 @@ headers = []
 [functions."*"]
 
 [build]
-publish = "/Users/issac/Desktop/Pulse /pulse-app/dist"
-publishOrigin = "ui"
-commandOrigin = "ui"
-base = "/Users/issac/Desktop/Pulse /pulse-app"
+publish = "/Users/issac/Desktop/pulse-app/dist"
+publishOrigin = "config"
+commandOrigin = "config"
 command = "npm run build"
+functions = "/Users/issac/Desktop/pulse-app/netlify/functions"
 
 [build.environment]
 

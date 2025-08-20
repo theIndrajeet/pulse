@@ -271,7 +271,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
   },
 
   gainXP: (amount) => {
-    const { xp, level } = get();
+    const { xp } = get();
     const newXP = xp + amount;
     const currentLevelXP = newXP % XP_PER_LEVEL;
     const newLevel = Math.floor(newXP / XP_PER_LEVEL) + 1;

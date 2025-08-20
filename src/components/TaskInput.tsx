@@ -4,7 +4,7 @@ import { Plus, AlertCircle, Clock, Calendar } from 'lucide-react';
 import { useTaskStore } from '../stores/taskStore';
 import type { Task } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useBehaviorComputed } from '../behavior/BehaviorProvider';
+// import { useBehaviorComputed } from '../behavior/BehaviorProvider';
 
 export default function TaskInput() {
   const [text, setText] = useState('');
@@ -14,7 +14,7 @@ export default function TaskInput() {
   const inputRef = useRef<HTMLInputElement>(null);
   const addTask = useTaskStore((state) => state.addTask);
   const { t } = useLanguage();
-  const computed = useBehaviorComputed();
+  // const computed = useBehaviorComputed();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

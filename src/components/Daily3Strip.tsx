@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
 import { Star, TrendingUp, Target } from 'lucide-react';
 import type { Task } from '../types';
-import { useLanguage } from '../contexts/LanguageContext';
+// import { useLanguage } from '../contexts/LanguageContext';
 
 interface Daily3StripProps {
   tasks: Task[];
 }
 
 export default function Daily3Strip({ tasks }: Daily3StripProps) {
-  const { t } = useLanguage();
+  // const { t } = useLanguage();
   const daily3Tasks = tasks.filter(task => task.isDaily3 && !task.completed);
   const completedDaily3 = tasks.filter(task => task.isDaily3 && task.completed);
 

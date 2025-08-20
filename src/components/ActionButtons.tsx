@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause, RotateCcw, Coffee } from 'lucide-react';
 import { useGameStore } from '../stores/gameStore';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useBehaviorComputed } from '../behavior/BehaviorProvider';
+// import { useLanguage } from '../contexts/LanguageContext';
+// import { useBehaviorComputed } from '../behavior/BehaviorProvider';
 
 export default function ActionButtons() {
   const [focusTime, setFocusTime] = useState(0);
@@ -12,8 +12,8 @@ export default function ActionButtons() {
   const [isBreak, setIsBreak] = useState(false);
   
   const gainXP = useGameStore((state) => state.gainXP);
-  const { t } = useLanguage();
-  const computed = useBehaviorComputed();
+  // const { t } = useLanguage();
+  // const computed = useBehaviorComputed();
 
   useEffect(() => {
     let interval: NodeJS.Timeout;

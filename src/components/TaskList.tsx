@@ -4,8 +4,8 @@ import type { Task } from '../types';
 import { useTaskStore } from '../stores/taskStore';
 import { useGameStore } from '../stores/gameStore';
 import { format } from 'date-fns';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useBehaviorComputed } from '../behavior/BehaviorProvider';
+// import { useLanguage } from '../contexts/LanguageContext';
+// import { useBehaviorComputed } from '../behavior/BehaviorProvider';
 import { Menu } from '@headlessui/react';
 
 interface TaskListProps {
@@ -13,13 +13,13 @@ interface TaskListProps {
   isCompleted?: boolean;
 }
 
-export default function TaskList({ tasks, isCompleted = false }: TaskListProps) {
+export default function TaskList({ tasks }: TaskListProps) {
   const toggleTask = useTaskStore((state) => state.toggleTask);
   const removeTask = useTaskStore((state) => state.removeTask);
   const updateTask = useTaskStore((state) => state.updateTask);
   const gainXP = useGameStore((state) => state.gainXP);
-  const { t } = useLanguage();
-  const computed = useBehaviorComputed();
+  // const { t } = useLanguage();
+  // const computed = useBehaviorComputed();
 
   const handleToggle = (task: Task) => {
     toggleTask(task.id);

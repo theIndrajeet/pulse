@@ -35,8 +35,8 @@ export const useTaskStore = create<TaskStore>((set, get) => ({
       const allTasks = await db.tasks.toArray();
       const mappedTasks = allTasks.map(t => ({
         ...t,
-        text: t.title || t.text || '',
-        completed: t.status === 'done' || t.completed || false,
+        text: t.text || '',
+        completed: t.completed || false,
         urgency: t.urgency || 'normal' as Task['urgency']
       }));
       
@@ -83,8 +83,8 @@ export const useTaskStore = create<TaskStore>((set, get) => ({
 
     const mappedTask = {
       ...task,
-      text: task.title || task.text || '',
-      completed: task.status === 'done' || task.completed || false,
+      text: task.text || '',
+      completed: task.completed || false,
       urgency: task.urgency || 'normal' as Task['urgency']
     };
     
@@ -143,7 +143,7 @@ export const useTaskStore = create<TaskStore>((set, get) => ({
   },
 
   clearCompleted: async () => {
-    await db.tasks.where('completed').equals(true).delete();
+    await db.tasks.where('completed').equals(1).delete();
     
     const { todayTasks, laterTasks } = get();
     set({

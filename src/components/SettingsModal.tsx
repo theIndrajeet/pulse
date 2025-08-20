@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { X, Download, Upload, Moon, Sun, Zap } from 'lucide-react';
 import { useSettingsStore } from '../stores/settingsStore';
 import { db } from '../db';
-import { useLanguage } from '../contexts/LanguageContext';
+// import { useLanguage } from '../contexts/LanguageContext';
 import { applyTheme, type Theme } from '../theme/theme';
-import { useBehavior } from '../behavior/BehaviorProvider';
+// import { useBehavior } from '../behavior/BehaviorProvider';
 
 interface SettingsModalProps {
   onClose: () => void;
@@ -30,8 +30,8 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
     updateSettings,
   } = useSettingsStore();
   
-  const { t } = useLanguage();
-  const { computed } = useBehavior();
+  // const { t } = useLanguage();
+  // const { computed } = useBehavior();
   const [activeTheme, setActiveTheme] = useState<Theme>(
     (localStorage.getItem('theme') as Theme) || 'auto'
   );

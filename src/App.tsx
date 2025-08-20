@@ -4,7 +4,8 @@ import { initializeDB } from './db';
 import { useTaskStore } from './stores/taskStore';
 import { useGameStore } from './stores/gameStore';
 import { useSettingsStore } from './stores/settingsStore';
-import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
+import { useAuthStore } from './stores/authStore';
+import { LanguageProvider } from './contexts/LanguageContext';
 import { BehaviorProvider, useBehavior } from './behavior/BehaviorProvider';
 import Header from './components/Header';
 import TaskInput from './components/TaskInput';
@@ -20,6 +21,10 @@ import CooldownMode from './components/CooldownMode';
 import StatsModal from './components/StatsModal';
 import SettingsModal from './components/SettingsModal';
 import PWAInstallPrompt from './components/PWAInstallPrompt';
+import AuthModal from './components/AuthModal';
+import SocialMoodFeed from './components/SocialMoodFeed';
+import LeaderboardModal from './components/LeaderboardModal';
+import FriendsModal from './components/FriendsModal';
 import { initializeTheme } from './theme/theme';
 
 function App() {
@@ -31,10 +36,14 @@ function App() {
   const [showCooldown, setShowCooldown] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [showAuth, setShowAuth] = useState(false);
+  const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const [showFriends, setShowFriends] = useState(false);
 
   const loadTasks = useTaskStore((state) => state.loadTasks);
   const loadGameState = useGameStore((state) => state.loadGameState);
   const loadSettings = useSettingsStore((state) => state.loadSettings);
+  const { initialize: initializeAuth } = useAuthStore();
 
   useEffect(() => {
     async function initialize() {
@@ -46,6 +55,7 @@ function App() {
         loadSettings(),
         loadGameState(),
         loadTasks(),
+        initializeAuth(), // Initialize social features
       ]);
       
       // Check if first time user
@@ -103,6 +113,12 @@ function App() {
           setShowStats={setShowStats}
           showSettings={showSettings}
           setShowSettings={setShowSettings}
+          showAuth={showAuth}
+          setShowAuth={setShowAuth}
+          showLeaderboard={showLeaderboard}
+          setShowLeaderboard={setShowLeaderboard}
+          showFriends={showFriends}
+          setShowFriends={setShowFriends}
         />
       </BehaviorProvider>
     </LanguageProvider>
@@ -122,6 +138,12 @@ function AppContent({
   setShowStats,
   showSettings,
   setShowSettings,
+  showAuth,
+  setShowAuth,
+  showLeaderboard,
+  setShowLeaderboard,
+  showFriends,
+  setShowFriends,
 }: {
   showDailyCheckIn: boolean;
   setShowDailyCheckIn: (show: boolean) => void;
@@ -135,12 +157,17 @@ function AppContent({
   setShowStats: (show: boolean) => void;
   showSettings: boolean;
   setShowSettings: (show: boolean) => void;
+  showAuth: boolean;
+  setShowAuth: (show: boolean) => void;
+  showLeaderboard: boolean;
+  setShowLeaderboard: (show: boolean) => void;
+  showFriends: boolean;
+  setShowFriends: (show: boolean) => void;
 }) {
-  const { t } = useLanguage();
+  // const { t } = useLanguage();
   const { computed } = useBehavior();
   const tasks = useTaskStore((state) => state.tasks);
-  const { currentStreak, level, xp, xpForNextLevel, totalCompleted } = useGameStore();
-  const { moodHistory } = useGameStore();
+  const { xp, xpForNextLevel, totalCompleted } = useGameStore();
 
   // Theme sync with behavior engine
   useEffect(() => {
@@ -179,6 +206,9 @@ function AppContent({
           onStatsClick={() => setShowStats(true)}
           onSettingsClick={() => setShowSettings(true)}
           onSafetyClick={computed.showCrisisButton ? () => setShowSafety(true) : undefined}
+          onAuthClick={() => setShowAuth(true)}
+          onLeaderboardClick={() => setShowLeaderboard(true)}
+          onFriendsClick={() => setShowFriends(true)}
         />
         
         <main>
@@ -233,6 +263,15 @@ function AppContent({
             transition={{ delay: 0.5 }}
           >
             <MoodSelector />
+          </motion.div>
+
+          {/* Social Mood Feed */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55 }}
+          >
+            <SocialMoodFeed />
           </motion.div>
 
           {/* Quick Stats */}
@@ -301,6 +340,15 @@ function AppContent({
         )}
         {showSettings && (
           <SettingsModal onClose={() => setShowSettings(false)} />
+        )}
+        {showAuth && (
+          <AuthModal isOpen={showAuth} onClose={() => setShowAuth(false)} />
+        )}
+        {showLeaderboard && (
+          <LeaderboardModal isOpen={showLeaderboard} onClose={() => setShowLeaderboard(false)} />
+        )}
+        {showFriends && (
+          <FriendsModal isOpen={showFriends} onClose={() => setShowFriends(false)} />
         )}
       </AnimatePresence>
 

@@ -92,7 +92,7 @@ export default function LaterDrawer({ onClose }: LaterDrawerProps) {
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <h3 className="font-serif text-base sm:text-lg mb-1">
-                        {task.text || task.title}
+                        {task.text}
                       </h3>
                       <p className="font-typewriter text-xs text-ink-faded">
                         Postponed {new Date(task.createdAt).toLocaleDateString()}

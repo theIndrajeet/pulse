@@ -1,18 +1,23 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { useGameStore } from '../stores/gameStore';
+import { useAuthStore } from '../stores/authStore';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useBehaviorComputed } from '../behavior/BehaviorProvider';
-import { Menu, X, BarChart3, Settings, Heart } from 'lucide-react';
+import { Menu, X, BarChart3, Settings, Heart, User, Trophy, Users, LogIn } from 'lucide-react';
 
 interface HeaderProps {
   onStatsClick: () => void;
   onSettingsClick: () => void;
   onSafetyClick?: () => void;
+  onAuthClick?: () => void;
+  onLeaderboardClick?: () => void;
+  onFriendsClick?: () => void;
 }
 
-export default function Header({ onStatsClick, onSettingsClick, onSafetyClick }: HeaderProps) {
+export default function Header({ onStatsClick, onSettingsClick, onSafetyClick, onAuthClick, onLeaderboardClick, onFriendsClick }: HeaderProps) {
   const { currentStreak, level } = useGameStore();
+  const { user, isSignedIn } = useAuthStore();
   const { t } = useLanguage();
   const computed = useBehaviorComputed();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -56,6 +61,27 @@ export default function Header({ onStatsClick, onSettingsClick, onSafetyClick }:
             
             {/* Desktop Nav */}
             <div className="flex items-center gap-1">
+              {/* Social Features */}
+              {isSignedIn && (
+                <>
+                  <button
+                    onClick={onFriendsClick}
+                    className="p-2.5 rounded-lg hover:bg-surface-alt transition-colors"
+                    aria-label="Friends & Family"
+                  >
+                    <Users className="w-5 h-5" />
+                  </button>
+                  
+                  <button
+                    onClick={onLeaderboardClick}
+                    className="p-2.5 rounded-lg hover:bg-surface-alt transition-colors"
+                    aria-label="Leaderboard"
+                  >
+                    <Trophy className="w-5 h-5" />
+                  </button>
+                </>
+              )}
+              
               <button
                 onClick={onStatsClick}
                 className="p-2.5 rounded-lg hover:bg-surface-alt transition-colors"
@@ -80,6 +106,16 @@ export default function Header({ onStatsClick, onSettingsClick, onSafetyClick }:
                 aria-label="Settings"
               >
                 <Settings className="w-5 h-5" />
+              </button>
+
+              {/* Auth Button */}
+              <button
+                onClick={onAuthClick}
+                className="p-2.5 rounded-lg hover:bg-surface-alt transition-colors"
+                aria-label={isSignedIn ? 'Profile' : 'Sign In'}
+                title={isSignedIn ? user?.display_name || 'Profile' : 'Sign In'}
+              >
+                {isSignedIn ? <User className="w-5 h-5" /> : <LogIn className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -137,6 +173,27 @@ export default function Header({ onStatsClick, onSettingsClick, onSafetyClick }:
 
                 {/* Menu Items */}
                 <nav className="space-y-2">
+                  {/* Social Features */}
+                  {isSignedIn && (
+                    <>
+                      <button
+                        onClick={() => handleNavClick(onFriendsClick)}
+                        className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-surface-alt transition-colors text-left"
+                      >
+                        <Users className="w-5 h-5 text-muted" />
+                        <span className="font-medium">Friends & Family</span>
+                      </button>
+
+                      <button
+                        onClick={() => handleNavClick(onLeaderboardClick)}
+                        className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-surface-alt transition-colors text-left"
+                      >
+                        <Trophy className="w-5 h-5 text-muted" />
+                        <span className="font-medium">Leaderboard</span>
+                      </button>
+                    </>
+                  )}
+
                   <button
                     onClick={() => handleNavClick(onStatsClick)}
                     className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-surface-alt transition-colors text-left"
@@ -161,6 +218,21 @@ export default function Header({ onStatsClick, onSettingsClick, onSafetyClick }:
                   >
                     <Settings className="w-5 h-5 text-muted" />
                     <span className="font-medium">Settings</span>
+                  </button>
+
+                  {/* Auth */}
+                  <button
+                    onClick={() => handleNavClick(onAuthClick)}
+                    className={`w-full flex items-center gap-3 p-3 rounded-lg transition-colors text-left ${
+                      isSignedIn 
+                        ? 'hover:bg-surface-alt' 
+                        : 'bg-accent/10 hover:bg-accent/20 text-accent'
+                    }`}
+                  >
+                    {isSignedIn ? <User className="w-5 h-5 text-muted" /> : <LogIn className="w-5 h-5" />}
+                    <span className="font-medium">
+                      {isSignedIn ? user?.display_name || 'Profile' : 'Sign In'}
+                    </span>
                   </button>
                 </nav>
               </div>

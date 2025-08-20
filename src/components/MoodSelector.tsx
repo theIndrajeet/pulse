@@ -2,13 +2,13 @@ import { motion } from 'framer-motion';
 import { useGameStore } from '../stores/gameStore';
 import { Cloud, CloudRain, CloudSnow, Sun, Wind } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useBehaviorComputed } from '../behavior/BehaviorProvider';
+// import { useBehaviorComputed } from '../behavior/BehaviorProvider';
 
 export default function MoodSelector() {
   const { moodHistory } = useGameStore();
   const setMood = useGameStore((state) => state.setMood);
   const { t } = useLanguage();
-  const computed = useBehaviorComputed();
+  // const computed = useBehaviorComputed();
   
   const todayMood = moodHistory.find(
     (m) => new Date(m.date).toDateString() === new Date().toDateString()
