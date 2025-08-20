@@ -1,0 +1,551 @@
+{
+  "default": {
+    "meta": { "name": "Balanced", "emoji": "🧭" },
+
+    "header": {
+      "title": "THE PULSE DAILY",
+      "tagline": "Your Mental Health Companion Since Today",
+      "nav": {
+        "statistics": "Statistics",
+        "archives": "Archives",
+        "editorial": "Editorial",
+        "settings": "Settings"
+      },
+      "edition": { "left": "{time}", "center": "EDITION No. {level} | VOL. {volume}", "right": "{streak}" }
+    },
+
+    "bulletin": {
+      "title": "Today's Mental Health Bulletin",
+      "submitLabel": "Submit your story",
+      "hint": "Type your task below. Use hashtags: #hard #move #admin",
+      "urgentTag": "Mark as priority",
+      "publishBtn": "PUBLISH TASK"
+    },
+
+    "input": {
+      "placeholder": "Start typing...",
+      "addBtn": "Add Mission",
+      "hashtagsHint": "Try #hard, #move, #admin"
+    },
+
+    "missions": {
+      "sectionTitle": "Today's Missions",
+      "completionLabel": "Completion Rate",
+      "completionValue": "{percent}%",
+      "emptyBoardTitle": "Wanted: More Tasks",
+      "slotEmpty": "Add a mission here",
+      "slotAwaiting": "VACANT SLOT #{num} - AWAITING ASSIGNMENT",
+      "completeBtn": "Complete",
+      "editBtn": "Edit",
+      "deleteBtn": "Delete",
+      "postponeBtn": "Do Later",
+      "restoreBtn": "Restore",
+      "labelHard": "CHALLENGE",
+      "labelMove": "PHYSICAL",
+      "labelAdmin": "ADMINISTRATIVE",
+      "pointsLabel": "+{points}XP",
+      "laterDrawer": "EXTRA EDITION",
+      "laterCount": "{count} additional tasks in the archive →"
+    },
+
+    "dailyThree": {
+      "sectionTitle": "Daily Challenges",
+      "deckTitle": "THE DAILY THREE",
+      "deckSub": "Complete all three for maximum wellness",
+      "cards": {
+        "move": { "title": "Get Moving!", "desc": "10 minutes of exercise", "points": "+15 POINTS" },
+        "hard": { "title": "Face Your Fears", "desc": "Do the hard thing", "points": "+25 POINTS" },
+        "admin": { "title": "Handle Business", "desc": "Boring but necessary", "points": "+10 POINTS" }
+      },
+      "progress": "DAILY PROGRESS",
+      "progressCounter": "{count}/3",
+      "celebration": "🎉 ALL DAILY CHALLENGES COMPLETE! +50 BONUS POINTS! 🎉"
+    },
+
+    "mood": {
+      "panelTitle": "MOOD FORECAST",
+      "currentForecast": "CURRENT FORECAST",
+      "scale": { 
+        "-2": { "label": "STORMY", "icon": "⛈️", "forecast": "Heavy clouds expected" },
+        "-1": { "label": "CLOUDY", "icon": "☁️", "forecast": "Overcast conditions" },
+        "0": { "label": "PARTLY CLOUDY", "icon": "⛅", "forecast": "Mixed conditions" },
+        "1": { "label": "SUNNY", "icon": "☀️", "forecast": "Clear skies ahead" },
+        "2": { "label": "BRILLIANT", "icon": "🌟", "forecast": "Perfect conditions" }
+      },
+      "weekly": "7-DAY OUTLOOK",
+      "labels": ["M","T","W","T","F","S","S"],
+      "responses": {
+        "low": "Remember: Even storms pass. Take care of yourself today.",
+        "neutral": "Neutral days are perfectly valid. You're doing fine.",
+        "high": "Wonderful! Keep that positive energy flowing."
+      }
+    },
+
+    "productivity": {
+      "panelTitle": "PRODUCTIVITY TOOLS",
+      "timerTitle": "PRODUCTIVITY TIMER",
+      "timerReady": "Ready to focus?",
+      "timerRunning": "Focus session in progress...",
+      "startBtn": "START FOCUS",
+      "pauseBtn": "PAUSE SESSION",
+      "timesUp": {
+        "title": "TIME'S UP!",
+        "message": "Great focus session completed!",
+        "points": "+25 POINTS"
+      }
+    },
+
+    "cooldown": {
+      "panelTitle": "TAKE A BREAK",
+      "cta": "Enter cooldown mode for mental restoration",
+      "active": "Cooldown active. Rest guilt-free.",
+      "exitBtn": "Exit Cooldown"
+    },
+
+    "stats": {
+      "panelTitle": "QUICK STATS",
+      "modalTitle": "SPORTS & STATISTICS",
+      "performanceReport": "Performance Report • {date}",
+      "streak": "STREAK:",
+      "streakValue": "{days} DAYS",
+      "xp": "EXPERIENCE:",
+      "xpValue": "{xp} XP",
+      "level": "LEVEL:",
+      "levelValue": "{level}",
+      "currentRun": "Current Run:",
+      "bestEver": "Best Ever:",
+      "todaysGame": "TODAY'S GAME",
+      "tasksCompleted": "Tasks Completed",
+      "weeklyChart": "WEEKLY PERFORMANCE CHART",
+      "xpToNext": "{xp} XP TO NEXT",
+      "closeBtn": "CLOSE REPORT"
+    },
+
+    "toasts": {
+      "added": "Task added. +5 XP",
+      "completed": "Task complete! +{xp} XP",
+      "deleted": "Task removed.",
+      "postponed": "Moved to Later.",
+      "restored": "Task restored.",
+      "cooldownOn": "Cooldown mode activated.",
+      "cooldownOff": "Welcome back!",
+      "levelUp": "LEVEL UP! You're now level {level}!",
+      "streakSaved": "Streak maintained!"
+    },
+
+    "footer": "© {year} PULSE MENTAL HEALTH DAILY | YOUR TRUSTED COMPANION SINCE TODAY"
+  },
+
+  "adhd": {
+    "meta": { "name": "ADHD", "emoji": "⚡" },
+
+    "header": {
+      "title": "THE PULSE DAILY",
+      "tagline": "Fast wins. Real momentum.",
+      "nav": {
+        "statistics": "Stats",
+        "archives": "Vault",
+        "editorial": "Editorial",
+        "settings": "Settings"
+      },
+      "edition": { "left": "{time}", "center": "COMBO BUILDER", "right": "🔥 {streak} DAY STREAK" }
+    },
+
+    "bulletin": {
+      "title": "SPARK BOARD",
+      "submitLabel": "Drop a spark",
+      "hint": "Type and hit Enter. Tags: #hard #move #admin",
+      "urgentTag": "⚠️ Boss-level",
+      "publishBtn": "CAPTURE IT!"
+    },
+
+    "input": {
+      "placeholder": "Got an idea? Capture it.",
+      "addBtn": "⚡ Quick Win",
+      "hashtagsHint": "Power-ups: #hard #move #admin"
+    },
+
+    "missions": {
+      "sectionTitle": "MISSION CONTROL",
+      "completionLabel": "POWER BAR",
+      "completionValue": "{percent}% CHARGED",
+      "emptyBoardTitle": "LET'S STACK SOME WINS",
+      "slotEmpty": "⚡ Quick-win slot — drop a task",
+      "slotAwaiting": "EMPTY SLOT - DROP SOMETHING HERE",
+      "completeBtn": "CRUSH IT",
+      "editBtn": "Tweak",
+      "deleteBtn": "Trash",
+      "postponeBtn": "Later Bin",
+      "restoreBtn": "Bring Back",
+      "labelHard": "BOSS LEVEL",
+      "labelMove": "POWER-UP",
+      "labelAdmin": "GRIND",
+      "pointsLabel": "+{points} XP!",
+      "laterDrawer": "BONUS LEVELS",
+      "laterCount": "{count} missions stashed →"
+    },
+
+    "dailyThree": {
+      "sectionTitle": "DAILY POWER-UPS",
+      "deckTitle": "YOUR POWER-UPS",
+      "deckSub": "Collect all three for a streak boost!",
+      "cards": {
+        "move": { "title": "Move x10", "desc": "10min movement burst", "points": "+15 XP!" },
+        "hard": { "title": "Boss Battle", "desc": "That spicy task", "points": "+25 XP!" },
+        "admin": { "title": "Quick Grind", "desc": "Tiny admin sweep", "points": "+10 XP!" }
+      },
+      "progress": "COMBO METER",
+      "progressCounter": "{count}/3 ⚡",
+      "celebration": "💥 POWER COMBO COMPLETE! +50 BONUS XP! 💥"
+    },
+
+    "mood": {
+      "panelTitle": "VIBE CHECK",
+      "currentForecast": "CURRENT VIBE",
+      "scale": { 
+        "-2": { "label": "STORMY", "icon": "⛈️", "forecast": "Low energy mode" },
+        "-1": { "label": "CLOUDY", "icon": "☁️", "forecast": "Building momentum" },
+        "0": { "label": "NEUTRAL", "icon": "⛅", "forecast": "Ready state" },
+        "1": { "label": "SUNNY", "icon": "☀️", "forecast": "Good vibes flowing" },
+        "2": { "label": "ON FIRE", "icon": "🔥", "forecast": "Maximum energy!" }
+      },
+      "weekly": "7-DAY STREAK",
+      "labels": ["M","T","W","T","F","S","S"],
+      "responses": {
+        "low": "Low energy? No worries. Even tiny wins count!",
+        "neutral": "Neutral is a launchpad. Ready when you are!",
+        "high": "YES! Ride that wave! 🚀"
+      }
+    },
+
+    "productivity": {
+      "panelTitle": "FOCUS LAUNCHER",
+      "timerTitle": "FOCUS BLAST",
+      "timerReady": "Ready? Launch in 3...2...1",
+      "timerRunning": "FOCUS MODE ACTIVE",
+      "startBtn": "🚀 LAUNCH",
+      "pauseBtn": "⏸️ PAUSE",
+      "timesUp": {
+        "title": "BOOM! TIME'S UP!",
+        "message": "Crushed that focus session!",
+        "points": "+25 XP EARNED!"
+      }
+    },
+
+    "cooldown": {
+      "panelTitle": "CHILL ZONE",
+      "cta": "Switch to chill mode — XP is safe",
+      "active": "Chilling. Zero penalties. Pure rest.",
+      "exitBtn": "Back to Action"
+    },
+
+    "stats": {
+      "panelTitle": "QUICK STATS",
+      "modalTitle": "ACHIEVEMENT CENTRAL",
+      "performanceReport": "Stats Dashboard • {date}",
+      "streak": "COMBO:",
+      "streakValue": "🔥 {days}",
+      "xp": "XP:",
+      "xpValue": "{xp}",
+      "level": "LVL:",
+      "levelValue": "{level}",
+      "currentRun": "Current Combo:",
+      "bestEver": "Best Combo:",
+      "todaysGame": "TODAY'S SCORE",
+      "tasksCompleted": "Missions Crushed",
+      "weeklyChart": "WEEKLY POWER CHART",
+      "xpToNext": "{xp} TO LEVEL UP",
+      "closeBtn": "CLOSE"
+    },
+
+    "toasts": {
+      "added": "⚡ Captured! +5 XP",
+      "completed": "💥 CRUSHED! +{xp} XP",
+      "deleted": "Trashed.",
+      "postponed": "Stashed for later.",
+      "restored": "Back in play!",
+      "cooldownOn": "Chill mode: ON",
+      "cooldownOff": "Welcome back, turbo!",
+      "levelUp": "🎮 LEVEL UP! Now LVL {level}!",
+      "streakSaved": "🔥 Streak saved!"
+    },
+
+    "footer": "⚡ PULSE TURBO MODE | FAST WINS, REAL MOMENTUM"
+  },
+
+  "bpd": {
+    "meta": { "name": "BPD", "emoji": "💙" },
+
+    "header": {
+      "title": "THE PULSE DAILY",
+      "tagline": "Gentle structure. You are not alone.",
+      "nav": {
+        "statistics": "Gentle Stats",
+        "archives": "Keepsakes",
+        "editorial": "Notes",
+        "settings": "Settings"
+      },
+      "edition": { "left": "{time}", "center": "We're here together", "right": "Day {days} 💙" }
+    },
+
+    "bulletin": {
+      "title": "Today's Care Board",
+      "submitLabel": "Add a step when you're ready",
+      "hint": "Type what feels doable. Tags: #hard #move #admin",
+      "urgentTag": "Needs extra care",
+      "publishBtn": "Save Step"
+    },
+
+    "input": {
+      "placeholder": "It's okay to start small...",
+      "addBtn": "🌱 Add Step",
+      "hashtagsHint": "Gentle tags: #hard #move #admin"
+    },
+
+    "missions": {
+      "sectionTitle": "Today's Steps",
+      "completionLabel": "Every effort counts",
+      "completionValue": "{percent}% (and that's enough)",
+      "emptyBoardTitle": "When you're ready, we'll add something together",
+      "slotEmpty": "🌱 Add a step when you're ready",
+      "slotAwaiting": "Waiting kindly for a step",
+      "completeBtn": "Done ✓",
+      "editBtn": "Adjust",
+      "deleteBtn": "Remove",
+      "postponeBtn": "Try Later",
+      "restoreBtn": "Bring Back",
+      "labelHard": "Brave Step",
+      "labelMove": "Movement",
+      "labelAdmin": "Care Task",
+      "pointsLabel": "+{points} (well done)",
+      "laterDrawer": "Saved for Later",
+      "laterCount": "{count} steps saved (no rush)"
+    },
+
+    "dailyThree": {
+      "sectionTitle": "Daily Care",
+      "deckTitle": "The Gentle Three",
+      "deckSub": "Three small steps for today's care",
+      "cards": {
+        "move": { "title": "Move Kindly", "desc": "10 gentle minutes", "points": "Self-care points" },
+        "hard": { "title": "One Brave Thing", "desc": "With all the support", "points": "Courage points" },
+        "admin": { "title": "Life Care", "desc": "A small necessary task", "points": "Care points" }
+      },
+      "progress": "Today's care",
+      "progressCounter": "{count}/3 steps",
+      "celebration": "💙 All three done. You did so well today. 💙"
+    },
+
+    "mood": {
+      "panelTitle": "How Are You?",
+      "currentForecast": "Current Feeling",
+      "scale": { 
+        "-2": { "label": "STORMY", "icon": "⛈️", "forecast": "It's okay to not be okay" },
+        "-1": { "label": "CLOUDY", "icon": "☁️", "forecast": "Gentle with yourself" },
+        "0": { "label": "NEUTRAL", "icon": "⛅", "forecast": "Neutral is valid" },
+        "1": { "label": "SUNNY", "icon": "☀️", "forecast": "A lighter moment" },
+        "2": { "label": "BRIGHT", "icon": "✨", "forecast": "Cherish this feeling" }
+      },
+      "weekly": "This Week",
+      "labels": ["M","T","W","T","F","S","S"],
+      "responses": {
+        "low": "Hard days don't last forever. We're here with you. 💙",
+        "neutral": "Neutral is okay. You don't have to be anything else.",
+        "high": "A good moment. Hold it gently. ✨"
+      }
+    },
+
+    "productivity": {
+      "panelTitle": "Focus with Support",
+      "timerTitle": "Gentle Focus",
+      "timerReady": "Take a breath, then we'll try for a bit",
+      "timerRunning": "You're doing it...",
+      "startBtn": "Begin Gently",
+      "pauseBtn": "Pause (it's okay)",
+      "timesUp": {
+        "title": "You did it!",
+        "message": "That was brave. Well done.",
+        "points": "You showed up 💙"
+      }
+    },
+
+    "cooldown": {
+      "panelTitle": "Safe Rest Space",
+      "cta": "You're safe to rest. Nothing breaks.",
+      "active": "Resting. Your progress is safe. 💙",
+      "exitBtn": "Return When Ready"
+    },
+
+    "stats": {
+      "panelTitle": "Your Journey",
+      "modalTitle": "Your Gentle Progress",
+      "performanceReport": "Care Report • {date}",
+      "streak": "Days together:",
+      "streakValue": "{days} 💙",
+      "xp": "Growth:",
+      "xpValue": "{xp} steps",
+      "level": "Journey:",
+      "levelValue": "Chapter {level}",
+      "currentRun": "Current journey:",
+      "bestEver": "Longest journey:",
+      "todaysGame": "TODAY'S CARE",
+      "tasksCompleted": "Steps Taken",
+      "weeklyChart": "THIS WEEK'S CARE",
+      "xpToNext": "{xp} steps to next chapter",
+      "closeBtn": "Close Gently"
+    },
+
+    "toasts": {
+      "added": "Step saved. 🌱",
+      "completed": "Well done. That matters. 💙",
+      "deleted": "Removed gently.",
+      "postponed": "We'll try later. No pressure.",
+      "restored": "Brought back with care.",
+      "cooldownOn": "Rest mode on. You're safe.",
+      "cooldownOff": "Welcome back. We kept your place. 💙",
+      "levelUp": "New chapter! You're growing. 🌱",
+      "streakSaved": "We're still here. Day saved. 💙"
+    },
+
+    "footer": "💙 PULSE CARE MODE | GENTLE STRUCTURE, ENDLESS SUPPORT"
+  },
+
+  "bipolar": {
+    "meta": { "name": "Bipolar", "emoji": "🌗" },
+
+    "header": {
+      "title": "THE PULSE DAILY",
+      "tagline": "Small, steady steps.",
+      "nav": {
+        "statistics": "Stability Stats",
+        "archives": "Archive",
+        "editorial": "Notes",
+        "settings": "Settings"
+      },
+      "edition": { "left": "{time}", "center": "Keep the rhythm", "right": "{days} steady days" }
+    },
+
+    "bulletin": {
+      "title": "Today's Balance Board",
+      "submitLabel": "Choose a steady step",
+      "hint": "Add what supports stability. Tags: #hard #move #admin",
+      "urgentTag": "Important today",
+      "publishBtn": "Add Steady Step"
+    },
+
+    "input": {
+      "placeholder": "Balance begins with one action...",
+      "addBtn": "🌗 Add Step",
+      "hashtagsHint": "Balance tags: #hard #move #admin"
+    },
+
+    "missions": {
+      "sectionTitle": "Today's Balance",
+      "completionLabel": "Keeping steady",
+      "completionValue": "{percent}%",
+      "emptyBoardTitle": "Pick one steady mission to begin",
+      "slotEmpty": "🌗 Choose a steady step",
+      "slotAwaiting": "Awaiting a balanced choice",
+      "completeBtn": "Complete",
+      "editBtn": "Adjust",
+      "deleteBtn": "Remove",
+      "postponeBtn": "Later",
+      "restoreBtn": "Restore",
+      "labelHard": "Challenge",
+      "labelMove": "Movement",
+      "labelAdmin": "Structure",
+      "pointsLabel": "+{points} balance points",
+      "laterDrawer": "Saved Tasks",
+      "laterCount": "{count} tasks in reserve"
+    },
+
+    "dailyThree": {
+      "sectionTitle": "Daily Rhythm",
+      "deckTitle": "The Rhythm Three",
+      "deckSub": "One task at a time, steady rhythm all week",
+      "cards": {
+        "move": { "title": "Move Gently", "desc": "10 balanced minutes", "points": "Rhythm points" },
+        "hard": { "title": "One Solid Task", "desc": "Grounded challenge", "points": "Stability points" },
+        "admin": { "title": "Keep Grounded", "desc": "Small stabilizing task", "points": "Structure points" }
+      },
+      "progress": "Daily rhythm",
+      "progressCounter": "{count}/3",
+      "celebration": "🌗 Balanced day complete. Well done. 🌗"
+    },
+
+    "mood": {
+      "panelTitle": "MOOD TRACKER",
+      "currentForecast": "Current State",
+      "scale": { 
+        "-2": { "label": "LOW", "icon": "🌑", "forecast": "Deep low - be gentle" },
+        "-1": { "label": "DOWN", "icon": "🌘", "forecast": "Low energy - go slow" },
+        "0": { "label": "BALANCED", "icon": "🌗", "forecast": "Steady state" },
+        "1": { "label": "UP", "icon": "🌖", "forecast": "Rising - stay grounded" },
+        "2": { "label": "HIGH", "icon": "🌕", "forecast": "High energy - channel wisely" }
+      },
+      "weekly": "7-Day Pattern",
+      "labels": ["M","T","W","T","F","S","S"],
+      "responses": {
+        "low": "Low phase. Rest is productive. One small step.",
+        "neutral": "Balanced moment. Maintain the rhythm.",
+        "high": "High energy. Channel it wisely. Stay grounded."
+      }
+    },
+
+    "productivity": {
+      "panelTitle": "STEADY FOCUS",
+      "timerTitle": "Calm Focus Timer",
+      "timerReady": "15 minutes of steady focus",
+      "timerRunning": "Maintaining focus...",
+      "startBtn": "Begin Steadily",
+      "pauseBtn": "Pause Calmly",
+      "timesUp": {
+        "title": "Session Complete",
+        "message": "Good, steady work.",
+        "points": "Balance maintained"
+      }
+    },
+
+    "cooldown": {
+      "panelTitle": "Wind-Down Mode",
+      "cta": "Evening wind-down for stability 🌙",
+      "active": "Wind-down active. Rest well.",
+      "exitBtn": "Exit Wind-Down",
+      "nightPrompt": "It's late — switch to wind-down mode?"
+    },
+
+    "stats": {
+      "panelTitle": "STABILITY STATS",
+      "modalTitle": "BALANCE REPORT",
+      "performanceReport": "Stability Report • {date}",
+      "streak": "Steady streak:",
+      "streakValue": "{days} days",
+      "xp": "Balance:",
+      "xpValue": "{xp} points",
+      "level": "Phase:",
+      "levelValue": "{level}",
+      "currentRun": "Current stability:",
+      "bestEver": "Longest stability:",
+      "todaysGame": "TODAY'S BALANCE",
+      "tasksCompleted": "Steps Maintained",
+      "weeklyChart": "WEEKLY RHYTHM",
+      "xpToNext": "{xp} to next phase",
+      "closeBtn": "Close Report"
+    },
+
+    "toasts": {
+      "added": "Steady step added. 🌗",
+      "completed": "Good — kept the rhythm.",
+      "deleted": "Removed.",
+      "postponed": "Saved for later.",
+      "restored": "Restored.",
+      "cooldownOn": "Wind-down mode on. 🌙",
+      "cooldownOff": "Wind-down complete.",
+      "levelUp": "New phase reached. Keep steady. 🌗",
+      "streakSaved": "Rhythm maintained.",
+      "nightWarning": "Evening check: Time to wind down? 🌙"
+    },
+
+    "footer": "🌗 PULSE BALANCE MODE | STEADY STEPS, STABLE RHYTHM"
+  }
+}

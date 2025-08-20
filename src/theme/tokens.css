@@ -1,0 +1,76 @@
+@layer base {
+  :root {
+    /* Day Theme - "Vintage-Modern Ivory" */
+    --bg: #FAF7F2;                /* Ivory background */
+    --surface: #FFFCF7;           /* Paper surface */
+    --surface-alt: #F6F2EB;       /* Alt panels */
+    --ink: #1F1B16;               /* Soft ink primary */
+    --muted: #5F5B54;             /* Smoke secondary */
+    --accent: #6E7F71;            /* Tea accent */
+    --accent-alt: #9B7A5E;        /* Sepia highlight */
+    --border: #E5DED4;            /* Hairline borders */
+    --border-muted: #EFE9DF;      /* Dividers */
+    
+    /* Status colors */
+    --positive: #2E7D32;
+    --warning: #B9802A;
+    --calm: #3B5BDB;
+    --error: #A53A3A;
+    
+    /* UI tokens */
+    --radius-sm: 0.375rem;        /* 6px */
+    --radius-card: 0.75rem;       /* 12px */
+    --radius-pill: 9999px;
+    --shadow-ambient: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-raised: 0 4px 12px rgba(0,0,0,0.08);
+    
+    /* Animation tokens */
+    --duration-fast: 180ms;
+    --duration-med: 220ms;
+    --easing: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Night Theme - "Tea & Graphite" */
+  [data-theme="night"] {
+    --bg: #0F1210;                /* Graphite green-black */
+    --surface: #151A17;           /* Card surface */
+    --surface-alt: #1A201C;       /* Alt panels */
+    --ink: #E7EDE7;               /* Graphite ink */
+    --muted: #B4BDB6;             /* Mist secondary */
+    --accent: #86A38F;            /* Muted tea */
+    --accent-alt: #9BB4A3;        /* Soft highlight */
+    --border: #303732;            /* Hairline borders */
+    --border-muted: #272D29;      /* Dividers */
+    
+    /* Status colors (softer for night) */
+    --positive: #6BBF8E;
+    --warning: #C79A4B;
+    --calm: #6B8CCB;
+    --error: #D06C6C;
+    
+    /* Adjusted shadows for dark theme */
+    --shadow-ambient: 0 1px 3px rgba(0,0,0,0.2);
+    --shadow-raised: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  /* Auto theme follows system preference */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="day"]) {
+      --bg: #0F1210;
+      --surface: #151A17;
+      --surface-alt: #1A201C;
+      --ink: #E7EDE7;
+      --muted: #B4BDB6;
+      --accent: #86A38F;
+      --accent-alt: #9BB4A3;
+      --border: #303732;
+      --border-muted: #272D29;
+      --positive: #6BBF8E;
+      --warning: #C79A4B;
+      --calm: #6B8CCB;
+      --error: #D06C6C;
+      --shadow-ambient: 0 1px 3px rgba(0,0,0,0.2);
+      --shadow-raised: 0 4px 12px rgba(0,0,0,0.3);
+    }
+  }
+}

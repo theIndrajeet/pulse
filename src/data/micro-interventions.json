@@ -1,0 +1,82 @@
+{
+  "grounding": {
+    "id": "grounding-5-4-3-2-1",
+    "type": "grounding",
+    "title": "5-4-3-2-1 Grounding",
+    "description": "Use your senses to reconnect with the present moment",
+    "steps": [
+      "Look around and name 5 things you can see",
+      "Touch and name 4 things you can feel",
+      "Listen and name 3 things you can hear",
+      "Identify 2 things you can smell",
+      "Name 1 thing you can taste"
+    ],
+    "duration": 3,
+    "xp": 5,
+    "pairsWidth": ["anxiety", "overwhelm"]
+  },
+  "breathing": {
+    "id": "box-breathing",
+    "type": "breathing",
+    "title": "Box Breathing",
+    "description": "4-4-4-4 breathing pattern to calm your nervous system",
+    "steps": [
+      "Breathe in for 4 counts",
+      "Hold your breath for 4 counts",
+      "Breathe out for 4 counts",
+      "Hold empty for 4 counts",
+      "Repeat 4 times"
+    ],
+    "duration": 5,
+    "xp": 5,
+    "pairsWidth": ["anxiety", "overwhelm", "racing_mind"]
+  },
+  "opposite_action": {
+    "id": "dbt-opposite-action",
+    "type": "opposite_action",
+    "title": "Opposite Action",
+    "description": "Do the opposite of what your emotions urge you to do",
+    "steps": [
+      "Identify your current emotion",
+      "Notice what action it's urging you to take",
+      "Consider: Is acting on this emotion effective right now?",
+      "If not, identify the opposite action",
+      "Take one small step toward the opposite action"
+    ],
+    "duration": 10,
+    "xp": 10,
+    "pairsWidth": ["avoidance", "low_mood"]
+  },
+  "cold_water": {
+    "id": "tip-cold-water",
+    "type": "grounding",
+    "title": "Cold Water Reset",
+    "description": "Use cold water to activate your dive response",
+    "steps": [
+      "Fill a bowl with cold water (add ice if available)",
+      "Take a deep breath",
+      "Hold your breath and put your face in the water for 15-30 seconds",
+      "Or: Hold a bag of frozen peas on your face",
+      "Or: Splash cold water on your face several times"
+    ],
+    "duration": 2,
+    "xp": 5,
+    "pairsWidth": ["overwhelm", "racing_mind"]
+  },
+  "muscle_relaxation": {
+    "id": "progressive-muscle",
+    "type": "grounding",
+    "title": "Quick Body Scan",
+    "description": "Release tension through progressive muscle relaxation",
+    "steps": [
+      "Clench your fists tight for 5 seconds",
+      "Release and notice the relaxation",
+      "Tighten your shoulders up to your ears",
+      "Release and let them drop",
+      "Continue with other muscle groups as needed"
+    ],
+    "duration": 5,
+    "xp": 5,
+    "pairsWidth": ["anxiety", "overwhelm"]
+  }
+}

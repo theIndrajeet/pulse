@@ -1,0 +1,105 @@
+{
+  "default": {
+    "taskCap": 5,
+    "timerMin": 15,
+    "graceDays": 2,
+    "animations": "medium",
+    "sounds": false,
+    "nightWindDown": null,
+    "showCrisisButton": false,
+    "autosuggestTags": false,
+    "eveningCopy": false,
+    "focusSessionLimit": null,
+    "cooldownPromptAfter": null,
+    "defaultFriction": "none",
+    "quickWinXP": 5,
+    "focusXP": 25,
+    "daily3XP": {
+      "move": 15,
+      "hard": 25,
+      "admin": 10
+    }
+  },
+  "adhd": {
+    "taskCap": 3,
+    "timerMin": 15,
+    "graceDays": 2,
+    "animations": "high",
+    "sounds": true,
+    "nightWindDown": null,
+    "showCrisisButton": false,
+    "autosuggestTags": true,
+    "eveningCopy": false,
+    "focusSessionLimit": null,
+    "cooldownPromptAfter": 5,
+    "defaultFriction": "overwhelm",
+    "quickWinXP": 5,
+    "focusXP": 30,
+    "daily3XP": {
+      "move": 20,
+      "hard": 30,
+      "admin": 15
+    },
+    "cooldownBehavior": {
+      "type": "reset-timer",
+      "duration": 3,
+      "message": "Quick reset: breathe, stand, water!"
+    }
+  },
+  "bpd": {
+    "taskCap": 2,
+    "timerMin": 10,
+    "graceDays": 4,
+    "animations": "low",
+    "sounds": false,
+    "nightWindDown": null,
+    "showCrisisButton": true,
+    "autosuggestTags": false,
+    "eveningCopy": false,
+    "focusSessionLimit": null,
+    "cooldownPromptAfter": null,
+    "defaultFriction": "anxiety",
+    "quickWinXP": 5,
+    "focusXP": 20,
+    "daily3XP": {
+      "move": 15,
+      "hard": 25,
+      "admin": 10
+    },
+    "cooldownBehavior": {
+      "type": "gentle-win",
+      "xp": 5,
+      "message": "One gentle win available"
+    }
+  },
+  "bipolar": {
+    "taskCap": 3,
+    "timerMin": 12,
+    "graceDays": 3,
+    "animations": "low",
+    "sounds": false,
+    "nightWindDown": "22:00",
+    "showCrisisButton": false,
+    "autosuggestTags": false,
+    "eveningCopy": true,
+    "focusSessionLimit": 3,
+    "cooldownPromptAfter": "21:00",
+    "defaultFriction": "racing_mind",
+    "quickWinXP": 5,
+    "focusXP": 20,
+    "daily3XP": {
+      "move": 15,
+      "hard": 20,
+      "admin": 10
+    },
+    "cooldownBehavior": {
+      "type": "wind-down",
+      "message": "Time to wind down for stability"
+    },
+    "overdriveLimits": {
+      "tasksPerDay": 3,
+      "focusSessionsEvening": 3,
+      "eveningStart": "20:00"
+    }
+  }
+}
